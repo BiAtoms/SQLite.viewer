@@ -43,6 +43,10 @@ open class SQLiteViewer {
         
         server.group("api") {
             server.group("databases") {
+                server.get("/") { _ in
+                    return .success(try db.getList())
+                }
+                
                 server.group("/{name}") {
                     server.get("/tables/{table-name}") { r in
                         let dbName = r.routeParams["name"]!
