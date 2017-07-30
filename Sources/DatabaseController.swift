@@ -1,5 +1,5 @@
 //
-//  DB.swift
+//  DatabaseController.swift
 //  SQLiteViewer
 //
 //  Created by Orkhan Alikhanov on 7/30/17.
@@ -8,7 +8,7 @@
 
 import SQLite
 
-open class DB {
+open class DatabaseController {
     open var path: String
     
     public init(path: String) {

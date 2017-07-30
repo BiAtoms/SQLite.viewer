@@ -20,7 +20,7 @@ open class SQLiteViewer {
     
     public var dbDir: String = "" {
         didSet {
-            db = DB(path: dbDir)
+            db = DatabaseController(path: dbDir)
         }
     }
     
@@ -30,7 +30,7 @@ open class SQLiteViewer {
         return server
     }()
     
-    var db: DB!
+    var db: DatabaseController!
     
     func prepareServer(_ server: Server) {
         server.errorHandler = SQLiteErrorHanler.self
