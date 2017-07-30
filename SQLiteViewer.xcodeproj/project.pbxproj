@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DEE21FE1F097812001E5F78 /* SQLite.viewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DEE21FC1F097812001E5F78 /* SQLite.viewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D4A4F5E1F2E2FED000AF312 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D4A4F5C1F2E2FED000AF312 /* index.html */; };
+		9D4A4F5F1F2E2FED000AF312 /* SQLiteViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A4F5D1F2E2FED000AF312 /* SQLiteViewer.swift */; };
+		9DEE21FE1F097812001E5F78 /* SQLiteViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DEE21FC1F097812001E5F78 /* SQLiteViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9DEE21F91F097812001E5F78 /* SQLite.viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DEE21FC1F097812001E5F78 /* SQLite.viewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLite.viewer.h; sourceTree = "<group>"; };
+		9D4A4F5C1F2E2FED000AF312 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		9D4A4F5D1F2E2FED000AF312 /* SQLiteViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteViewer.swift; sourceTree = "<group>"; };
+		9DEE21F91F097812001E5F78 /* SQLiteViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLiteViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DEE21FC1F097812001E5F78 /* SQLiteViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteViewer.h; sourceTree = "<group>"; };
 		9DEE21FD1F097812001E5F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -27,10 +31,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D4A4F5B1F2E2FED000AF312 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9D4A4F5C1F2E2FED000AF312 /* index.html */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		9DEE21EF1F097812001E5F78 = {
 			isa = PBXGroup;
 			children = (
-				9DEE21FB1F097812001E5F78 /* SQLite.viewer */,
+				9DEE21FB1F097812001E5F78 /* Sources */,
 				9DEE21FA1F097812001E5F78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -38,18 +50,20 @@
 		9DEE21FA1F097812001E5F78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9DEE21F91F097812001E5F78 /* SQLite.viewer.framework */,
+				9DEE21F91F097812001E5F78 /* SQLiteViewer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9DEE21FB1F097812001E5F78 /* SQLite.viewer */ = {
+		9DEE21FB1F097812001E5F78 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9DEE21FC1F097812001E5F78 /* SQLite.viewer.h */,
+				9D4A4F5B1F2E2FED000AF312 /* Assets */,
+				9D4A4F5D1F2E2FED000AF312 /* SQLiteViewer.swift */,
+				9DEE21FC1F097812001E5F78 /* SQLiteViewer.h */,
 				9DEE21FD1F097812001E5F78 /* Info.plist */,
 			);
-			path = SQLite.viewer;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,16 +73,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DEE21FE1F097812001E5F78 /* SQLite.viewer.h in Headers */,
+				9DEE21FE1F097812001E5F78 /* SQLiteViewer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9DEE21F81F097812001E5F78 /* SQLite.viewer */ = {
+		9DEE21F81F097812001E5F78 /* SQLiteViewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DEE22011F097812001E5F78 /* Build configuration list for PBXNativeTarget "SQLite.viewer" */;
+			buildConfigurationList = 9DEE22011F097812001E5F78 /* Build configuration list for PBXNativeTarget "SQLiteViewer" */;
 			buildPhases = (
 				9DEE21F41F097812001E5F78 /* Sources */,
 				9DEE21F51F097812001E5F78 /* Frameworks */,
@@ -79,9 +93,9 @@
 			);
 			dependencies = (
 			);
-			name = SQLite.viewer;
+			name = SQLiteViewer;
 			productName = SQLite.viewer;
-			productReference = 9DEE21F91F097812001E5F78 /* SQLite.viewer.framework */;
+			productReference = 9DEE21F91F097812001E5F78 /* SQLiteViewer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -96,11 +110,12 @@
 					9DEE21F81F097812001E5F78 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = SLC8XA65WS;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 9DEE21F31F097812001E5F78 /* Build configuration list for PBXProject "SQLite.viewer" */;
+			buildConfigurationList = 9DEE21F31F097812001E5F78 /* Build configuration list for PBXProject "SQLiteViewer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -112,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9DEE21F81F097812001E5F78 /* SQLite.viewer */,
+				9DEE21F81F097812001E5F78 /* SQLiteViewer */,
 			);
 		};
 /* End PBXProject section */
@@ -122,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4A4F5E1F2E2FED000AF312 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4A4F5F1F2E2FED000AF312 /* SQLiteViewer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,18 +259,20 @@
 		9DEE22021F097812001E5F78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SLC8XA65WS;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SQLite.viewer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.biatoms.SQLite-viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -261,13 +280,14 @@
 		9DEE22031F097812001E5F78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SLC8XA65WS;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SQLite.viewer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.biatoms.SQLite-viewer";
@@ -280,7 +300,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9DEE21F31F097812001E5F78 /* Build configuration list for PBXProject "SQLite.viewer" */ = {
+		9DEE21F31F097812001E5F78 /* Build configuration list for PBXProject "SQLiteViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DEE21FF1F097812001E5F78 /* Debug */,
@@ -289,13 +309,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DEE22011F097812001E5F78 /* Build configuration list for PBXNativeTarget "SQLite.viewer" */ = {
+		9DEE22011F097812001E5F78 /* Build configuration list for PBXNativeTarget "SQLiteViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DEE22021F097812001E5F78 /* Debug */,
 				9DEE22031F097812001E5F78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
