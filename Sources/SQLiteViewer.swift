@@ -12,12 +12,7 @@ import SQLite
 open class SQLiteViewer {
     open static var shared = SQLiteViewer()
     
-    public let assetDir: String = {
-        let bundle = Bundle(for: SQLiteViewer.self)
-        let url = bundle.resourceURL!
-        return url.appendingPathComponent("com.biatoms.sqlite-viewer.assets.bundle").path
-    }()
-    
+    public var assetDir: String = ""
     public var dbDir: String = "" {
         didSet {
             db = DatabaseController(path: dbDir)
@@ -76,11 +71,13 @@ open class SQLiteViewer {
             }
         }
         
+        
         server.files(in: assetDir)
     }
     
-    open func start(dbDir: String? = nil) {
+    open func start(dbDir: String? = nil, assetDir: String? = nil) {
         self.dbDir = dbDir ?? NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        self.assetDir = assetDir ?? Bundle(for: SQLiteViewer.self).resourceURL!.appendingPathComponent("com.biatoms.sqlite-viewer.assets.bundle").path
         server.run(port: 8081)
     }
     
