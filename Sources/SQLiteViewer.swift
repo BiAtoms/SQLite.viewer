@@ -24,7 +24,7 @@ open class SQLiteViewer {
         }
     }
     
-    private lazy var server: Server = {
+    lazy var server: Server = {
         let server = Server()
         self.prepareServer(server)
         return server
@@ -32,7 +32,7 @@ open class SQLiteViewer {
     
     var db: DB!
     
-    open func prepareServer(_ server: Server) {
+    func prepareServer(_ server: Server) {
         server.errorHandler = SQLiteErrorHanler.self
         
         let assetDir = self.assetDir
