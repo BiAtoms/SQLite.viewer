@@ -60,6 +60,14 @@ open class SQLiteViewer {
                         let dbName = r.routeParams["name"]!
                         return try StaticServer.serveFile(at: "\(self.dbDir)/\(dbName)")
                     }
+                    server.get("/execute") { r in
+                        if let query = r.queryParams["query"] {
+                            let dbName = r.routeParams["name"]!
+                            return .success(try db.executeRawQuery(db: dbName, query: query))
+                        }
+                        
+                        return .error("Query is missing. use `/execute?query=insert...`")
+                    }
                 }
             }
         }
@@ -112,21 +120,25 @@ open class DB {
     
     open func getTableData(db: String, table: String) throws -> [String: Any] {
         let db = try getCon(db: db)
-        var columns = [String]()
-        var rows = [[Any]]()
-        try db.prepare("PRAGMA table_info('\(table)')").forEach {
-            columns.append("\($0[1]!)")
+        return try selectQuery(db: db, query: "SELECT * FROM '\(table)'")
+    }
+    
+    open func executeRawQuery(db: String, query: String) throws -> Any {
+        let db = try getCon(db: db)
+        
+        if query.lowercased().contains("select") {
+            return try selectQuery(db: db, query: query)
         }
         
-        try db.prepare("SELECT * FROM '\(table)'").forEach { row in
-            rows.append((0..<columns.count).map {
-                return row[$0] as Any
-            })
-        }
-        
+        try db.run(query)
+        return ["affected_rows": db.changes]
+    }
+    
+    open func selectQuery(db: Connection, query: String) throws -> [String: Any] {
+        let statement = try db.run(query)
         return [
-            "columns": columns,
-            "rows": rows
+            "columns": statement.columnNames,
+            "rows": Array(statement)
         ]
     }
 }
