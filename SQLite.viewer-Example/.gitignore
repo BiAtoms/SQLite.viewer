@@ -165,4 +165,4 @@ playground.xcworkspace
 # ignore cocoapod generated files
 Pods
 Podfile.lock
-HttpSwift.xcworkspace
+*.xcworkspace
