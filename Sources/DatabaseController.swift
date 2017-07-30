@@ -16,7 +16,13 @@ open class DatabaseController {
     }
     
     open func getCon(db: String) throws -> Connection {
-        return try Connection("\(path)/\(db)")
+        let path = "\(self.path)/\(db)"
+        
+        if !FileManager.default.fileExists(atPath: path) {
+            throw SQLite.Result.error(message: "no such database: \(db)", code: 1, statement: nil)
+        }
+        
+        return try Connection(path)
     }
     
     open func getList() throws -> [String] {
