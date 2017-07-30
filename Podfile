@@ -6,4 +6,9 @@ target 'SQLiteViewer' do
   # Pods for SQLiteViewer
   pod 'Http.swift', '~> 1.3'
   pod 'SQLite.swift', '~> 0.11'
+
+  target 'SQLiteViewerTests' do
+    inherit! :search_paths
+    pod 'Request.swift', '~> 1.1'
+  end
 end

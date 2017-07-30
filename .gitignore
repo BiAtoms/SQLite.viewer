@@ -160,3 +160,9 @@ playground.xcworkspace
 /*.gcno
 
 # End of https://www.gitignore.io/api/macos,swift,xcode,objective-c
+
+
+# ignore cocoapod generated files
+Pods
+Podfile.lock
+*.xcworkspace
