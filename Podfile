@@ -9,6 +9,6 @@ target 'SQLiteViewer' do
 
   target 'SQLiteViewerTests' do
     inherit! :search_paths
-    pod 'Request.swift', '~> 1.1'
+    pod 'Alamofire', '~> 4.5'
   end
 end
