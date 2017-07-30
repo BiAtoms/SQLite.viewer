@@ -1,0 +1,6 @@
+framework module HttpSwift {
+  umbrella header "Http.swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

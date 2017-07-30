@@ -1,0 +1,6 @@
+framework module SocketSwift {
+  umbrella header "Socket.swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_SQLiteViewer {
+  umbrella header "Pods-SQLiteViewer-umbrella.h"
+
+  export *
+  module * { export * }
+}
