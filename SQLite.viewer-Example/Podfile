@@ -1,0 +1,8 @@
+platform :ios, '8.0'
+
+target 'SQLite.viewer-Example' do
+  use_frameworks!
+
+  pod 'SQLite.viewer', :path => '../'
+
+end
