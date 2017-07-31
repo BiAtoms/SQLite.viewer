@@ -3,8 +3,49 @@
 <head>
     <title>SQLite.viewer</title>
     <meta charset="utf-8">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="flash-alert.min.js"></script>
+    <script src="api.js"></script>
 </head>
 <body>
-    <h1> Testing </h1>
+    <form>
+     <div class="form-small">
+         <div>
+             <textarea id="query" style="width: 50%"></textarea>
+         </div>
+        <button type="button" class="btn btn-primary" onclick="executeQuery($('#query').val())">Run query</button>
+     </div>
+    </form>
+    <div>
+        <button type="button" class="btn btn-primary" onclick="download()">Download database</button>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Databases</div>
+            </div>
+            <div id="db-list" class="list-group">
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Tables</div>
+            </div>
+            <div id="table-list" class="list-group">
+            </div>
+        </div>
+
+        <div class="col-sm-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">Data</div>
+            </div>
+            <div id="table-data">
+                
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
