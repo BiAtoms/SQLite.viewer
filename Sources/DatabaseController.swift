@@ -10,6 +10,7 @@ import SQLite
 
 open class DatabaseController {
     open var path: String
+    open var extensions = ["db", "sqlite", "sqlite2", "sqlite3"]
     
     public init(path: String) {
         self.path = path
@@ -28,7 +29,7 @@ open class DatabaseController {
     open func getList() throws -> [String] {
         let contents = try FileManager.default.contentsOfDirectory(atPath: path)
         let result = contents.filter { s in
-            ["db", "sqlite", "sqlite2", "sqlite3"].reduce(false) {
+            extensions.reduce(false) {
                 $0 || s.hasSuffix($1)
             }
         }
