@@ -18,6 +18,7 @@
 /* Begin PBXFileReference section */
 		3631778B997CDFE3B08C2F5F /* Pods_SQLite_viewer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLite_viewer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAFEA907FB076947E8AF4F6 /* Pods-SQLite.viewer-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLite.viewer-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQLite.viewer-Example/Pods-SQLite.viewer-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9D5689851F2FC31F00572F08 /* SQLite.viewer-Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLite.viewer-Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		9DEE220D1F097B1E001E5F78 /* SQLite.viewer-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SQLite.viewer-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEE22101F097B1E001E5F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DEE22121F097B1E001E5F78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 				9DEE22171F097B1E001E5F78 /* Assets.xcassets */,
 				9DEE22191F097B1E001E5F78 /* LaunchScreen.storyboard */,
 				9DEE221C1F097B1E001E5F78 /* Info.plist */,
+				9D5689851F2FC31F00572F08 /* SQLite.viewer-Example-Bridging-Header.h */,
 			);
 			path = "SQLite.viewer-Example";
 			sourceTree = "<group>";
@@ -124,6 +126,7 @@
 					9DEE220C1F097B1E001E5F78 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = SLC8XA65WS;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -337,12 +340,15 @@
 			baseConfigurationReference = 8EAFEA907FB076947E8AF4F6 /* Pods-SQLite.viewer-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SLC8XA65WS;
 				INFOPLIST_FILE = "SQLite.viewer-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.biatoms.SQLite-viewer-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite.viewer-Example/SQLite.viewer-Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -352,12 +358,14 @@
 			baseConfigurationReference = FB914FCFD755B2CACA4A7522 /* Pods-SQLite.viewer-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SLC8XA65WS;
 				INFOPLIST_FILE = "SQLite.viewer-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.biatoms.SQLite-viewer-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite.viewer-Example/SQLite.viewer-Example-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
