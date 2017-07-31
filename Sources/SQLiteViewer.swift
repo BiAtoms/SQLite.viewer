@@ -58,7 +58,14 @@ open class SQLiteViewer {
                     server.get("/download") { r in
                         let dbName = r.routeParams["name"]!
                         return try StaticServer.serveFile(at: "\(self.dbDir)/\(dbName)")
-                    }
+                        }.middleware { request, closure in
+                            let response = try closure(request)
+                            let dbName = request.routeParams["name"]!
+                            response.headers["Content-Type"] = "application/octet-stream"
+                            response.headers["Content-Disposition"] = "attachment; filename=\"\(dbName)\""
+                            return response
+                       }
+                    
                     server.get("/execute") { r in
                         if let query = r.queryParams["query"] {
                             let dbName = r.routeParams["name"]!
