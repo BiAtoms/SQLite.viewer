@@ -6,13 +6,13 @@ Api.onError = function (reason) {
     console.log(reason);
 }
 
-Api.get = function(url, params, success) {
+Api.get = function(url, params, success, options) {
 if (typeof success === 'undefined') {
     success = params;
     params = null;
 }
 
-$.ajax({
+$.ajax($.extend({
         url: 'api/databases/' + url,
         type: 'GET',
         data: params,
@@ -20,8 +20,8 @@ $.ajax({
         success: function(json) {        
             var handler = json.success ? success : Api.onError;
             handler(json.data);
-        }
-    });
+        },
+    }, options));
 }
 
 Api.getDbList = function (success) {
@@ -40,6 +40,11 @@ Api.executeQuery = function (database, query, success) {
     Api.get(database + '/execute', { query: query } , success);
 }
 
-Api.downloadDatabase = function (database) {
-    
+Api.downloadDatabase = function (database, completion) {
+    Api.get(database + '/download', null, null, { error: function(_, b) {
+        if (b = "parsererror") {
+            window.location = "api/databases/" + database + "/download";
+            completion();
+        }
+    }});
 }
