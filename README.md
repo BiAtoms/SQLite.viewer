@@ -3,18 +3,38 @@
 
 # SQLite.viewer
 
-An elegant library for debugging sqlite databases in iOS applications.
+An elegant library for viewing, editing, or debugging sqlite databases in iOS applications. Inspired by [Android Debug Database](https://github.com/amitshekhariitbhu/Android-Debug-Database).
 
 ## Features
 
 * List available databases
 * List tables
-* Insert rows
-* Edit rows
 * Run raw query
 
+## ToDo
+
+- [ ] Insert rows
+- [ ] Edit rows
+
+## Usage
+
+In AppDelegate.swift file, just start `SQLiteViewer`.
 ```swift
-//TODO: write usage example
+import UIKit
+import SQLiteViewer
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        SQLiteViewer.shared.start()
+        return true
+    }
+}
 ```
 
 ## Installation
@@ -32,7 +52,7 @@ To integrate SQLite.viewer into your Xcode project using CocoaPods, specify it i
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 target '<Your Target Name>' do
-    pod 'SQLite.viewer' ~> '1.0', :configurations => ['Debug']
+    pod 'SQLite.viewer', '~> 1.0', :configurations => ['Debug']
 end
 ```
 
