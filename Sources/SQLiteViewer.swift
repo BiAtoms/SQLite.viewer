@@ -25,7 +25,7 @@ open class SQLiteViewer {
         return server
     }()
     
-    var db: DatabaseController!
+    open var db: DatabaseController!
     
     func prepareServer(_ server: Server) {
         server.errorHandler = SQLiteErrorHanler.self
@@ -93,7 +93,7 @@ open class SQLiteViewer {
         server.run(port: port)
     }
     
-    func stop() {
+    open func stop() {
         server.stop()
     }
 }
