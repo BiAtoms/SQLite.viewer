@@ -13,6 +13,7 @@
 		9D07ECA11F2F3A7E00AE8604 /* bootstrap.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 9D07EC9D1F2F3A7E00AE8604 /* bootstrap.min.js */; };
 		9D07ECA61F2F499D00AE8604 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 9D07ECA51F2F499D00AE8604 /* jquery.min.js */; };
 		9D07ECA81F2F4A6800AE8604 /* api.js in Resources */ = {isa = PBXBuildFile; fileRef = 9D07ECA71F2F4A6800AE8604 /* api.js */; };
+		9D07ECAA1F2F6B9400AE8604 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = 9D07ECA91F2F6B9400AE8604 /* app.js */; };
 		9D4A4F5E1F2E2FED000AF312 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D4A4F5C1F2E2FED000AF312 /* index.html */; };
 		9D4A4F5F1F2E2FED000AF312 /* SQLiteViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A4F5D1F2E2FED000AF312 /* SQLiteViewer.swift */; };
 		9D4A4F671F2E321E000AF312 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A4F661F2E321E000AF312 /* Tests.swift */; };
@@ -43,6 +44,7 @@
 		9D07EC9D1F2F3A7E00AE8604 /* bootstrap.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bootstrap.min.js; sourceTree = "<group>"; };
 		9D07ECA51F2F499D00AE8604 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
 		9D07ECA71F2F4A6800AE8604 /* api.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = api.js; sourceTree = "<group>"; };
+		9D07ECA91F2F6B9400AE8604 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
 		9D4A4F5C1F2E2FED000AF312 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		9D4A4F5D1F2E2FED000AF312 /* SQLiteViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteViewer.swift; sourceTree = "<group>"; };
 		9D4A4F641F2E321E000AF312 /* SQLiteViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLiteViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				9D07ECA71F2F4A6800AE8604 /* api.js */,
+				9D07ECA91F2F6B9400AE8604 /* app.js */,
 				9D07ECA51F2F499D00AE8604 /* jquery.min.js */,
 				9D07EC9D1F2F3A7E00AE8604 /* bootstrap.min.js */,
 			);
@@ -290,6 +293,7 @@
 			files = (
 				9D07EC9F1F2F3A7E00AE8604 /* bootstrap.min.css in Resources */,
 				9D4A4F5E1F2E2FED000AF312 /* index.html in Resources */,
+				9D07ECAA1F2F6B9400AE8604 /* app.js in Resources */,
 				9D07ECA61F2F499D00AE8604 /* jquery.min.js in Resources */,
 				9D07ECA01F2F3A7E00AE8604 /* favicon.ico in Resources */,
 				9D07ECA11F2F3A7E00AE8604 /* bootstrap.min.js in Resources */,
