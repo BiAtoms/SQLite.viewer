@@ -57,6 +57,11 @@ open class SQLiteViewer {
                     
                     server.get("/download") { r in
                         let dbName = r.routeParams["name"]!
+                        let path = "\(self.dbDir)/\(dbName)"
+                        if !File(path: path).exists {
+                            throw SQLite.Result.error(message: "no such database: \(dbName)", code: 1, statement: nil)
+                        }
+                        
                         return try StaticServer.serveFile(at: "\(self.dbDir)/\(dbName)")
                         }.middleware { request, closure in
                             let response = try closure(request)
