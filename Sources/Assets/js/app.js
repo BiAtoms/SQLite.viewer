@@ -14,7 +14,7 @@ function message(msg, isError) {
     $.alert(msg, {
         type: isError ? 'danger' : 'success',
         closeTime: 2000,
-        position: 'right-bottom',
+        position: ['bottom-right', [0, 0.01]],
         animaton: true
     });
 }
