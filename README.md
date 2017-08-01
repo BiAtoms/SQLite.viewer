@@ -5,6 +5,8 @@
 
 An elegant library for viewing, editing, or debugging sqlite databases in iOS applications. Inspired by [Android Debug Database](https://github.com/amitshekhariitbhu/Android-Debug-Database).
 
+![SQLiteViewer demo](Screenshots/SQLiteViewer.gif)
+
 ## Features
 
 * List available databases
