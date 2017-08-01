@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		63B963FF7E9F41F9533BF2EC /* Pods_SQLite_viewer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3631778B997CDFE3B08C2F5F /* Pods_SQLite_viewer_Example.framework */; };
+		9D1DFFDE1F30863B00880FC8 /* chinook.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 9D1DFFDC1F30854A00880FC8 /* chinook.sqlite */; };
+		9D1DFFDF1F30863B00880FC8 /* Northwind.sl3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D1DFFDD1F30854A00880FC8 /* Northwind.sl3 */; };
 		9DEE22111F097B1E001E5F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE22101F097B1E001E5F78 /* AppDelegate.swift */; };
 		9DEE22131F097B1E001E5F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEE22121F097B1E001E5F78 /* ViewController.swift */; };
 		9DEE22161F097B1E001E5F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEE22141F097B1E001E5F78 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		3631778B997CDFE3B08C2F5F /* Pods_SQLite_viewer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLite_viewer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAFEA907FB076947E8AF4F6 /* Pods-SQLite.viewer-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLite.viewer-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQLite.viewer-Example/Pods-SQLite.viewer-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9D1DFFDC1F30854A00880FC8 /* chinook.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinook.sqlite; sourceTree = "<group>"; };
+		9D1DFFDD1F30854A00880FC8 /* Northwind.sl3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Northwind.sl3; sourceTree = "<group>"; };
 		9D5689851F2FC31F00572F08 /* SQLite.viewer-Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLite.viewer-Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		9DEE220D1F097B1E001E5F78 /* SQLite.viewer-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SQLite.viewer-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEE22101F097B1E001E5F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D1DFFDB1F30852500880FC8 /* Sample DBs */ = {
+			isa = PBXGroup;
+			children = (
+				9D1DFFDC1F30854A00880FC8 /* chinook.sqlite */,
+				9D1DFFDD1F30854A00880FC8 /* Northwind.sl3 */,
+			);
+			path = "Sample DBs";
+			sourceTree = "<group>";
+		};
 		9DEE22041F097B1E001E5F78 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +92,7 @@
 		9DEE220F1F097B1E001E5F78 /* SQLite.viewer-Example */ = {
 			isa = PBXGroup;
 			children = (
+				9D1DFFDB1F30852500880FC8 /* Sample DBs */,
 				9DEE22101F097B1E001E5F78 /* AppDelegate.swift */,
 				9DEE22121F097B1E001E5F78 /* ViewController.swift */,
 				9DEE22141F097B1E001E5F78 /* Main.storyboard */,
@@ -155,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEE221B1F097B1E001E5F78 /* LaunchScreen.storyboard in Resources */,
+				9D1DFFDE1F30863B00880FC8 /* chinook.sqlite in Resources */,
+				9D1DFFDF1F30863B00880FC8 /* Northwind.sl3 in Resources */,
 				9DEE22181F097B1E001E5F78 /* Assets.xcassets in Resources */,
 				9DEE22161F097B1E001E5F78 /* Main.storyboard in Resources */,
 			);
