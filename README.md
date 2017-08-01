@@ -13,8 +13,11 @@ An elegant library for viewing, editing, or debugging sqlite databases in iOS ap
 
 ## ToDo
 
-- [ ] Insert rows
-- [ ] Edit rows
+- [ ] Inserting rows
+- [ ] Editing rows
+- [ ] Deleting rows
+- [ ] New UI and UX
+
 
 ## Usage
 
