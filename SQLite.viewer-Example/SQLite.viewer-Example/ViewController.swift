@@ -8,7 +8,7 @@
 
 import UIKit
 import SQLiteViewer
-
+//todo copy sample databases into document folder.
 class ViewController: UIViewController {
     let label: UILabel = {
         let label = UILabel(frame: UIScreen.main.bounds)
