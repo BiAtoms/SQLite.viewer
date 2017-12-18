@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'SQLite.viewer'
-    s.version          = '1.1.0'
+    s.version          = '2.0.0'
     s.summary          = 'An elegant library for debugging sqlite databases in iOS applications'
     s.homepage         = 'https://github.com/BiAtoms/SQLite.viewer'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
     s.source_files = 'Sources/*.swift'
     s.resource_bundles = { 'com.biatoms.sqlite-viewer.assets' => ['Sources/**/*.{js,css,ico,html}'] }
 
-    s.dependency 'Http.swift', '1.3.2'
-    s.dependency 'SQLite.swift', '0.11.2'
+    s.dependency 'Http.swift', '2.0.0'
+    s.dependency 'SQLite.swift', '>= 0.11.4'
 end

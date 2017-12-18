@@ -66,9 +66,14 @@ open class DatabaseController {
     
     open func selectQuery(db: Connection, query: String) throws -> [String: Any] {
         let statement = try db.run(query)
+        
+        func toArray<S: Sequence>(_ elements: S) -> Array<S.Element> { // resolves ambiguity
+            return Array(elements)
+        }
+        
         return [
             "columns": statement.columnNames,
-            "rows": Array(statement)
+            "rows": toArray(statement)
         ]
     }
 }
