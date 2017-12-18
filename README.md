@@ -1,5 +1,6 @@
 [![Platform](https://img.shields.io/cocoapods/p/SQLite.viewer.svg?style=flat)](https://github.com/BiAtoms/SQLite.viewer)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/SQLite.viewer.svg)](https://cocoapods.org/pods/SQLite.viewer)
+[![Build Status - Master](https://travis-ci.org/BiAtoms/SQLite.viewer.svg?branch=master)](https://travis-ci.org/BiAtoms/SQLite.viewer)
 
 # SQLite.viewer
 
