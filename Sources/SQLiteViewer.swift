@@ -90,7 +90,7 @@ open class SQLiteViewer {
     open func start(port: UInt16 = 8081, dbDir: String? = nil, assetDir: String? = nil) {
         self.dbDir = dbDir ?? NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         self.assetDir = assetDir ?? Bundle(for: SQLiteViewer.self).resourceURL!.appendingPathComponent("com.biatoms.sqlite-viewer.assets.bundle").path
-        server.run(port: port)
+        try! server.run(port: port)
     }
     
     open func stop() {
